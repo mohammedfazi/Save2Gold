@@ -16,3 +16,10 @@ LinearGradient primarygradiend=LinearGradient(
       Color(0xFFFEE778),
       Color(0xFFF1BA50)
     ]);
+
+LinearGradient secondarygradiend=LinearGradient(
+    begin: Alignment(0.00, -1.00),
+    end: Alignment(0, 1),
+    colors: [
+      Color(0xFFFFF8F0), Color(0x00999490)
+    ]);

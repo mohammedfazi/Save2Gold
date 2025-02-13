@@ -98,46 +98,69 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
     );
   }
-  
-  Future <void> logout(){
-    return showDialog(
-        context: context, builder: (BuildContext context){
-      return  AlertDialog(
-        backgroundColor: Color_Constant.primarycolor,
-        surfaceTintColor: Colors.transparent,
-        title: const Icon(Icons.logout,color: Color_Constant.primarycolor,),
-        content: Padding(
-          padding: const EdgeInsets.all(4.0),
-          child: Text("Are you sure you want to logout the App.",style: commonstylepoppins(color: Colors.black,weight: FontWeight.w400,size: 15,),textAlign: TextAlign.center,),
-        ),
-        actions: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: displaywidth(context)*0.30,
-                child: TextButton(
-                    onPressed: (){
-                      Get.back();
-                    },
-                    child: Center(child: Text("No",style: commonstylepoppins(color: Color_Constant.primarycolor),))),
-              ),
 
-              SizedBox(
-                width: displaywidth(context)*0.30,
-                child: TextButton(
-                    onPressed: (){
-                      Get.to(const Loginscreen());
-                    },
-                    child: Center(child: Text("Yes",style: commonstylepoppins(color: Colors.black),))),
-              )
-            ],
-          )
-        ],
-      );
-    });
+  Future<void> logout() {
+    return showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Dialog( // Use Dialog instead of AlertDialog to have full control
+          backgroundColor: Colors.transparent, // Make the background transparent
+          child: Container(
+            padding: const EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              gradient: primarygradiend,
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Are you Sure ?\nDo You Want To Logout",
+                    style: commonstylepoppins(weight: FontWeight.w500, size: 14),
+                    textAlign: TextAlign.start,
+                  ),
+                  const SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      SizedBox(
+                        width: displaywidth(context) * 0.15,
+                        child: TextButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          child: Center(
+                            child: Text("No",
+                                style: commonstylepoppins(size: 14,weight: FontWeight.w600)),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: displaywidth(context) * 0.15,
+                        child: TextButton(
+                          onPressed: () {
+                            Get.to(const Loginscreen());
+                          },
+                          child: Center(
+                            child: Text("Yes",
+                                style: commonstylepoppins(color: Color(0xFFA58639))),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    );
   }
+
 
 
 }

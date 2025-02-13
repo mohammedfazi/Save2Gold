@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:save2gold/Screens/Joinscheme/JoinForm_screen.dart';
 import 'package:save2gold/common/Color_Constant.dart';
 import 'package:save2gold/common/Commonsize.dart';
 import 'package:save2gold/common/Textstyle.dart';
 import 'package:save2gold/widget/FadeDivider.dart';
 import 'package:save2gold/widget/TopContainer.dart';
-
+import 'package:get/get.dart';
 import '../../widget/BackButton.dart';
 import '../../widget/GradientVerticalDivider.dart';
 import '../../widget/spantxt.dart';
@@ -34,14 +35,14 @@ class _JoinschemeScreenState extends State<JoinschemeScreen> {
                       physics: BouncingScrollPhysics(),
                       itemBuilder: (BuildContext context, int index) {
                         return Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(4.0),
                           child: SizedBox(
                             width: double.infinity,
                             child: Card(
                               surfaceTintColor: Colors.transparent,
                               color: Colors.white,
                               child: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.all(10.0),
                                 child: Column(
                                   children: [
                                     Row(
@@ -179,19 +180,24 @@ class _JoinschemeScreenState extends State<JoinschemeScreen> {
                                                       weight: FontWeight.w500))
                                             ],
                                           ),
-                                          Container(
-                                            decoration: BoxDecoration(
-                                                gradient: primarygradiend,
-                                                borderRadius: BorderRadius.circular(15)),
-                                            child: Padding(
-                                              padding: const EdgeInsets.symmetric(
-                                                  vertical: 12.0, horizontal: 30.0),
-                                              child: Center(
-                                                  child: Text(
-                                                    "Join now",
-                                                    style: commonstylepoppins(
-                                                        size: 10, weight: FontWeight.w600),
-                                                  )),
+                                          InkWell(
+                                            onTap: (){
+                                              Get.to(JoinformScreen());
+                                            },
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                  gradient: primarygradiend,
+                                                  borderRadius: BorderRadius.circular(15)),
+                                              child: Padding(
+                                                padding: const EdgeInsets.symmetric(
+                                                    vertical: 12.0, horizontal: 30.0),
+                                                child: Center(
+                                                    child: Text(
+                                                      "Join now",
+                                                      style: commonstylepoppins(
+                                                          size: 10, weight: FontWeight.w600),
+                                                    )),
+                                              ),
                                             ),
                                           ),
                                         ],

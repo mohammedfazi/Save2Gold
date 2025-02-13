@@ -3,12 +3,14 @@ import 'package:get/get.dart';
 import 'package:save2gold/common/Color_Constant.dart';
 import 'package:save2gold/common/Textstyle.dart';
 
-Widget commontextfield(String txt,controller, {TextInputType type=TextInputType.text}){
+Widget commontextfield(String txt,controller, {TextInputType type=TextInputType.text,int lines=1}){
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: TextFormField(
+      cursorColor: Color_Constant.primarycolor,
       keyboardType: type,
       controller: controller,
+      maxLines: lines,
       style: commonstylepoppins(size: 15,weight: FontWeight.w500,color: Colors.black),
       decoration: InputDecoration(
         hintText: txt,
@@ -19,7 +21,7 @@ Widget commontextfield(String txt,controller, {TextInputType type=TextInputType.
         hintStyle: commonstylepoppins(size: 14,color: Color(0xFFC4C4C4)),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide: const BorderSide(color: Color(0xFF7C7976))),
+          borderSide: const BorderSide(color: Color(0xFFB2BBC6))),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
             borderSide:const BorderSide(color: Color_Constant.primarycolor)),

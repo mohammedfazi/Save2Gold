@@ -51,7 +51,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     defaultPinTheme: PinTheme(
                       height: 60,
                       width: 60,
-                      textStyle: commonstylepoppins(size: 30,weight: FontWeight.w800,color: Color(0xFF7C7976)),
+                      textStyle: commonstylepoppins(size: 25,weight: FontWeight.w400,color: Color(0xFF7C7976)),
                       decoration: BoxDecoration(
                         border: Border.all(color:  Color_Constant.primarycolor),
                         borderRadius: BorderRadius.circular(20),

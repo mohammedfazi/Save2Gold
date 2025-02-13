@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:save2gold/common/Color_Constant.dart';
 import 'package:save2gold/common/Commonsize.dart';
 import 'package:save2gold/common/Textstyle.dart';
+import 'package:save2gold/widget/appbar_widget.dart';
 
 class ContactusScreen extends StatefulWidget {
   const ContactusScreen({super.key});
@@ -13,11 +15,12 @@ class _ContactusScreenState extends State<ContactusScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      // appBar: appbar_widget("Contact Us",context),
+ appBar: appbar_widget(context, "Contact Us"),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ListView.builder(
-            itemCount: 1,
+          physics: BouncingScrollPhysics(),
+            itemCount: 5,
             itemBuilder: (BuildContext context,int index){
           return Padding(
             padding: const EdgeInsets.all(8.0),
@@ -43,14 +46,14 @@ class _ContactusScreenState extends State<ContactusScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SizedBox(
-                        width: displaywidth(context)*0.60,
+                        width: displaywidth(context)*0.50,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text("ABC GOLD PALACE",style: commonstylepoppins(color:Color(0xFF1A73E8),size: 13,weight: FontWeight.w700),),
+                              child: Text("Joyalukkas Jewellery",style: commonstylepoppins(color:Colors.black,size: 15,weight: FontWeight.w600),),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -58,8 +61,8 @@ class _ContactusScreenState extends State<ContactusScreen> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("No.14a, M ela Vedhi,Thuruthuraipoondi-6147xx",style: commonstylepoppins(color:Colors.black,size: 11,weight: FontWeight.w700),),
-                                  Text("Phone:042387987879",style: commonstylepoppins(color:Colors.black,size: 11,weight: FontWeight.w700),)
+                                  Text("911, Cross Cut Rd, Gandhipuram, Coimbatore, Tamil Nadu 641012",style: commonstylepoppins(color: Color(0xFFA6A6A6),size: 12,weight: FontWeight.w500),),
+                                  Text("Phone:0422-249-4777",style: commonstylepoppins(color: Color(0xFFA6A6A6),size: 12,weight: FontWeight.w500),)
                                 ],
                               ),
                             )
@@ -67,9 +70,17 @@ class _ContactusScreenState extends State<ContactusScreen> {
                           ],
                         ),
                       ),
-                      CircleAvatar(
-                        backgroundColor: Colors.green,
-                        child: Icon(Icons.phone,color: Colors.white,),
+                      Row(
+                        children: [
+                          IconButton(onPressed: (){}, icon: Icon(Icons.share,size: 30,color: Colors.grey.shade500,)),
+                          Padding(
+                            padding: const EdgeInsets.only(left:8.0),
+                            child: CircleAvatar(
+                              backgroundColor: Colors.green,
+                              child: Icon(Icons.phone,color: Colors.white,),
+                            ),
+                          ),
+                        ],
                       )
 
                     ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../common/Color_Constant.dart';
 import '../../common/Textstyle.dart';
+import '../../widget/appbar_widget.dart';
 
 class TermsScreen extends StatefulWidget {
   const TermsScreen({super.key});
@@ -14,14 +15,15 @@ class _TermsScreenState extends State<TermsScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      appBar: appbar_widget(context,"Terms & Conditions"),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.only(top:12.0,left: 12.0,right: 12.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
               Container(
                 decoration: BoxDecoration(
-                    color: Color_Constant.primarycolor,
+                    gradient: secondarygradiend,
                     borderRadius: BorderRadius.circular(10)
                 ),
                 child: Padding(

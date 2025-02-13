@@ -52,3 +52,10 @@ Widget Bodyappbar(BuildContext context,txt){
   );
 }
 
+BoxShadow primaryshadow=BoxShadow(
+  color: Colors.grey.shade200,
+  offset: Offset(0.2, 0.2),
+  spreadRadius: 2,
+  blurRadius: 10
+);
+

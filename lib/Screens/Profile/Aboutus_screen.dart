@@ -18,18 +18,13 @@ class _AboutusScreenState extends State<AboutusScreen> {
     return  Scaffold(
       appBar: appbar_widget(context,"About Us"),
       body: Padding(
-        padding: const EdgeInsets.only(top:20.0,left: 20.0,right: 20.0),
+        padding: const EdgeInsets.only(top:12.0,left: 12.0,right: 12.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
               Container(
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment(0.00, -1.00),
-                      end: Alignment(0, 1),
-                      colors: [
-                    Color(0xFFFFF8F0), Color(0x00999490)
-                  ]),
+                  gradient: secondarygradiend,
                   borderRadius: BorderRadius.circular(10)
                 ),
                 child: Padding(
