@@ -325,7 +325,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: SizedBox(
                       width: double.infinity,
                       child: Card(

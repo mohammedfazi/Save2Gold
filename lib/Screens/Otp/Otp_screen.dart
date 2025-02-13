@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:pinput/pinput.dart';
 import 'package:save2gold/Screens/Dashboard/Dashboard_screen.dart';
+import 'package:save2gold/Screens/Introduction/Introduction_screen.dart';
 import 'package:save2gold/common/Color_Constant.dart';
 
 import '../../common/Commonsize.dart';
@@ -58,7 +59,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       ),
                     ),
                     length: 6,
-                    onCompleted: (pin)=>Get.to(DashboardScreen()),
+                    onCompleted: (pin)=>Get.to(OnBoardingscreen()),
                     controller: pinController,
                   ),
                 )
