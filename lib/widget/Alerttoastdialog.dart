@@ -7,7 +7,7 @@ import 'package:save2gold/common/Textstyle.dart';
         SnackBar(
           duration:const Duration(seconds: 1),
           backgroundColor: Colors.green,
-            margin:const EdgeInsets.all(8.0),
+            margin:const EdgeInsets.all(12.0),
             behavior: SnackBarBehavior.floating,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10)
@@ -28,7 +28,7 @@ import 'package:save2gold/common/Textstyle.dart';
         SnackBar(
             duration:const Duration(seconds: 1),
             backgroundColor: Colors.red,
-            margin:const EdgeInsets.all(8.0),
+            margin:const EdgeInsets.all(12.0),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10)
             ),

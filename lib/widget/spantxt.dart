@@ -14,3 +14,17 @@ RichText Spantxt(txt){
         ]
       ));
 }
+
+RichText Spantxt2(txt1,txt2,style1,style2){
+  return RichText(
+      text: TextSpan(
+          text: '$txt1',
+          style: style1,
+          children: [
+            TextSpan(
+                text: '$txt2',
+                style: style2
+            )
+          ]
+      ));
+}

@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color_Constant.backgroundcolor,
       ),
       debugShowCheckedModeBanner: false,
-      home: DashboardScreen(),
+      home: Loginscreen(),
     );
   }
 }

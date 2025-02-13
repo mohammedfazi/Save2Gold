@@ -11,6 +11,16 @@ TextStyle commonstylepoppins({double size=12.0,Color color =Colors.black,FontWei
   );
 }
 
+TextStyle commonstyleplusjakarta({double size=12.0,Color color =Colors.black,FontWeight weight=FontWeight.w300}){
+  return GoogleFonts.plusJakartaSans(
+      fontSize: size,
+      fontWeight: weight,
+      color: color,
+      letterSpacing: 0.15
+
+  );
+}
+
 
 TextStyle btnstyle(){
   return GoogleFonts.poppins(

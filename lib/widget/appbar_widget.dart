@@ -1,39 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:save2gold/common/Commonsize.dart';
+
+import '../Screens/Profile/Profile_screen.dart';
+import '../common/Color_Constant.dart';
+import '../common/Commonsize.dart';
 import '../common/Textstyle.dart';
+import 'BackButton.dart';
 
-
-PreferredSizeWidget  appbar_widget(txt,context){
+PreferredSize appbar_widget(BuildContext context,txt) {
   return PreferredSize(
-    preferredSize: Size.fromHeight(displayheight(context)*0.10),
-    child: AppBar(
-      elevation: 0.5,
-      shadowColor: Colors.grey,
-      backgroundColor: Colors.white,
-      surfaceTintColor: Colors.transparent,
-      leading:  InkWell(
-        onTap:(){
-          Get.back();
-        },
-        child: const Padding(
-          padding: EdgeInsets.all(4.0),
-          child: Card(
-            elevation: 2,
-            color: Colors.white,
+      preferredSize: Size.fromHeight(displayheight(context) * 0.10),
+      child: Container(
+        decoration: BoxDecoration(
+            gradient: primarygradiend,
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(30))),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 8.0, left: 8.0),
+          child: AppBar(
             surfaceTintColor: Colors.transparent,
-            child: Center(
-              child: Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Icon(Icons.arrow_back_ios_new_rounded,color: Colors.black,size: 20,),
-              ),
+            backgroundColor: Colors.transparent,
+            leading: BackButton1(context),
+            title: Text(
+              "$txt",
+              style: commonstylepoppins(size: 18, weight: FontWeight.w500),
             ),
+            centerTitle: true,
+
           ),
         ),
-      ),
-      centerTitle: true,
-      title:Text("$txt",style: commonstylepoppins(size: 20,weight: FontWeight.w600,color: Colors.black),),
-    ),
-  );
+      ));
 }

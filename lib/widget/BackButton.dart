@@ -19,7 +19,7 @@ Widget BackButton1(BuildContext context){
             BoxShadow(
               color: Colors.grey.shade200,
               offset: Offset(0.2, 0.2),
-              spreadRadius: 2,
+              spreadRadius: 1,
               blurRadius: 2
             )
           ],
