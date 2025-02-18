@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:save2gold/Screens/Ledger/Viewledger_screen.dart';
 import 'package:save2gold/widget/TopContainer.dart';
-
+import 'package:get/get.dart';
 import '../../common/Color_Constant.dart';
 import '../../common/Commonsize.dart';
 import '../../common/Textstyle.dart';
@@ -122,8 +123,7 @@ class _LedgerScreenState extends State<LedgerScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: displayheight(context)*0.62,
+                Expanded(
                   child: ListView.builder(
                     itemCount: 5,
                     shrinkWrap: true,
@@ -281,21 +281,26 @@ class _LedgerScreenState extends State<LedgerScreen> {
                                                   weight: FontWeight.w500))
                                         ],
                                       ),
-                                      Container(
-                                        decoration: BoxDecoration(
-                                            gradient: primarygradiend,
-                                            borderRadius:
-                                            BorderRadius.circular(15)),
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              vertical: 12.0, horizontal: 30.0),
-                                          child: Center(
-                                              child: Text(
-                                                "View Scheme",
-                                                style: commonstylepoppins(
-                                                    size: 10,
-                                                    weight: FontWeight.w600),
-                                              )),
+                                      InkWell(
+                                        onTap: (){
+                                          Get.to(ViewledgerScreen());
+                                        },
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                              gradient: primarygradiend,
+                                              borderRadius:
+                                              BorderRadius.circular(15)),
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                vertical: 12.0, horizontal: 30.0),
+                                            child: Center(
+                                                child: Text(
+                                                  "View Scheme",
+                                                  style: commonstylepoppins(
+                                                      size: 10,
+                                                      weight: FontWeight.w600),
+                                                )),
+                                          ),
                                         ),
                                       ),
                                     ],

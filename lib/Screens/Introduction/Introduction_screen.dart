@@ -90,6 +90,7 @@ class _OnBoardingscreenState extends State<OnBoardingscreen> {
       ),
     );
   }
+
   skipwidget(int backnumber,int nextnumber){
     return Padding(
       padding:  EdgeInsets.only(right: 10.0,top: 8.0,left: 10.0),

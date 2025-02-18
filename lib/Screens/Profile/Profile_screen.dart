@@ -2,10 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:save2gold/Screens/Dashboard/Dashboard_screen.dart';
 import 'package:save2gold/Screens/Login/Loginscreen.dart';
+import 'package:save2gold/Screens/Notification/Notification_screen.dart';
 import 'package:save2gold/Screens/Profile/Aboutus_screen.dart';
 import 'package:save2gold/Screens/Profile/Contactus_screen.dart';
 import 'package:save2gold/Screens/Profile/Privacypolicy_screen.dart';
 import 'package:save2gold/Screens/Profile/Terms_screen.dart';
+import 'package:save2gold/Screens/Transaction/Transaction_screen.dart';
 import 'package:save2gold/common/Color_Constant.dart';
 import 'package:save2gold/common/Commonsize.dart';
 import 'package:save2gold/common/Textstyle.dart';
@@ -39,9 +41,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   listtile("Contact Us", Icons.phone,4),
                   listtile("Notification", CupertinoIcons.bell_fill,5),
                   listtile("Location", Icons.location_on,6),
-                  listtile("Wallet", Icons.wallet_rounded,6),
-                  listtile("Transactions", Icons.receipt,6),
-                  listtile("Logout", Icons.logout,7),
+                  listtile("Wallet", Icons.wallet_rounded,7),
+                  listtile("Transactions", Icons.receipt,8),
+                  listtile("Logout", Icons.logout,9),
                 ],
               ),
             )
@@ -69,12 +71,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       count==4?
                       Get.to(const ContactusScreen()):
                       count==5?
-                      Get.to(const ContactusScreen()):
-                      // Get.to(const NotificationScreen()):
+                      Get.to(const NotificationScreen()):
                       count==6?
                       Get.to(const ContactusScreen()):
+                      count==7?
+                      Get.to(const TransactionScreen()):
+                      count==8?
+                      Get.to(const TransactionScreen()):
                        // deleteaccount():
-                          count==7?
+                          count==9?
                               logout():
                               Get.back();
             },
