@@ -1,12 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:save2gold/widget/TopContainer.dart';
-
 import '../../common/Color_Constant.dart';
-import '../../common/Commonsize.dart';
 import '../../common/Textstyle.dart';
-import '../../widget/GradientVerticalDivider.dart';
-import '../../widget/spantxt.dart';
+
 
 class TransactionScreen extends StatefulWidget {
   const TransactionScreen({super.key});
@@ -104,7 +101,6 @@ class _TransactionScreenState extends State<TransactionScreen> {
               ],
             ),
           ),
-
         ],
       ),
     );

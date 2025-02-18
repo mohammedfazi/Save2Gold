@@ -5,6 +5,7 @@ import 'package:save2gold/Screens/Dashboard/Dashboard_screen.dart';
 import 'package:save2gold/Screens/Ledger/Viewledger_screen.dart';
 import 'package:save2gold/Screens/Login/Loginscreen.dart';
 import 'package:save2gold/Screens/Receipt/Receipt_screen.dart';
+import 'package:save2gold/Screens/Splash/Splash_screen.dart';
 import 'package:save2gold/common/Color_Constant.dart';
 
 void main() {
@@ -23,12 +24,12 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Sava 2 Gold',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color_Constant.primarycolor),
         useMaterial3: true,
         scaffoldBackgroundColor: Color_Constant.backgroundcolor,
       ),
       debugShowCheckedModeBanner: false,
-      home: DashboardScreen(),
+      home: SplashScreen(),
     );
   }
 }
